@@ -1,0 +1,69 @@
+// 
+
+#!cexversion
+3.0
+
+#!citelibrary
+name#Template Collection
+urn#urn:cite2:cex:fufolio.2020:templates
+license#CC Share Alike.  For details, see more info.
+
+
+#!datamodels
+Collection#Model#Label#Description
+// "imagemodel" identifies a collection as a collection of "citable images"
+urn:cite2:fufolio:camerarius1668.2020a:#urn:cite2:cite:datamodels.v1:imagemodel#Citable image model#CITE architecture model of citable images.  See documentation at <http://cite-architecture.github.io/imagemodel/>.
+//
+// "binaryimg" identifies a _new_ collection that provides data necessary to resolve image URNs
+// to actual image data from a service.
+//
+urn:cite2:fufolio:binaryimg.v1:#urn:cite2:cite:datamodels.v1:binaryimg#Citable image model#CITE architecture model of binary images manipulable by URN reference.  See <TBA>.
+
+//
+// Collection Inventory
+// 
+#!citecollections
+URN#Description#Labelling property#Ordering property#License
+// A collection that documents our datamodels
+urn:cite2:cite:datamodels.v1:#CITE data models#urn:cite2:cite:datamodels.v1.label:##Public domain
+// The collection of "binaryimg" implementations
+urn:cite2:fufolio:binaryimg.v1:#Collections of binary images#urn:cite2:fufolio:binaryimg.v1.label:##Public domain
+
+// Properties for the datamodels collection
+#!citeproperties
+Property#Label#Type#Authority list
+urn:cite2:cite:datamodels.v1.urn:#Data model#Cite2Urn#
+urn:cite2:cite:datamodels.v1.label:#Label#String#
+urn:cite2:cite:datamodels.v1.description:#Description#String#
+
+// Data for the datamodels collection
+#!citedata
+urn#label#description
+urn:cite2:cite:datamodels.v1:binaryimg#Binary image model#Model of binary images manipulable by URN reference.  See <TBA>.
+urn:cite2:cite:datamodels.v1:imagemodel#Citable images#Model of citable images from the CITE Architecture.  See <http://cite-architecture.github.io/imagemodel/>.
+
+// Properties for the binaryimg collection. These properties provide everything
+// we need to resolve URNs to image services
+#!citeproperties
+Property#Label#Type#Authority list
+urn:cite2:fufolio:binaryimg.v1.urn:#Binary Image#Cite2Urn#
+urn:cite2:fufolio:binaryimg.v1.label:#Label#String#
+urn:cite2:fufolio:binaryimg.v1.collection:#Image Collection#Cite2Urn#
+urn:cite2:fufolio:binaryimg.v1.protocol:#Protocol#String#iiifApi,localDeepZoom,JPG,iipDeepZoom
+urn:cite2:fufolio:binaryimg.v1.path:#Path on Server#String#
+urn:cite2:fufolio:binaryimg.v1.url:#Service URN Base#String#
+urn:cite2:fufolio:binaryimg.v1.rights:#Rights#String#
+
+//
+// Data for the binaryimg collection. Each record connects a collection of 
+// images with a particular image protocol. In this case, there are four:
+// IIF-api, iipDeepZoom, local DeepZoom files, JPGs files on the filesystem.
+// (CiteApp uses all four of these.)
+//
+#!citedata
+urn#label#collection#protocol#path#url#rights
+urn:cite2:fufolio:binaryimg.v1:camararius_amphoreusIIF#Binary data for images of the 1668 edition of Camerarius: Furman University. IIIF Files at the University of Houson.#urn:cite2:fufolio:camerarius1668.2020a:#iiifApi#/project/homer/pyramidal/deepzoom/fufolio/camerarius1668/2020a/#http://www.homermultitext.org/iipsrv?#Creative Commons Attribution Share-Alike.
+urn:cite2:fufolio:binaryimg.v1:camararius__iipDeepZoom:#Binary data for images of the 1668 edition of Camerarius. IIIF Files at the University of Houson. (must add .tif.dzi)#urn:cite2:fufolio:camerarius1668.2020a:#iipDeepZoom#/project/homer/pyramidal/deepzoom/fufolio/camerarius1668/2020a/#http://www.homermultitext.org/iipsrv?DeepZoom=#Creative Commons Attribution Share-Alike.
+urn:cite2:fufolio:binaryimg.v1:camararius__localDeepZoom#Binary data for images of the 1668 edition of Camerarius. DeepZoom files#urn:cite2:fufolio:camerarius1668.2020a:#localDeepZoom#/fufolio/camerarius1668/2020a#image_archive#Creative Commons Attribution Share-Alike.
+urn:cite2:fufolio:binaryimg.v1:camararius__localJPG#Binary data for images of the 1668 edition of Camerarius. DeepZoom files#urn:cite2:fufolio:papyri.2020a:#JPG#/fufolio/camerarius1668/2020a/#image_archive#Creative Commons Attribution Share-Alike.
+
