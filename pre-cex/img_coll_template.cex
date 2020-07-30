@@ -6,10 +6,17 @@ license#public domain
 #!citecollections
 URN#Description#Labelling property#Ordering property#License
 urn:cite2:fufolio:camerarius1668.2020a:#Images of the 1668 edition of Camerarius#urn:cite2:fufolio:camerarius1668.2020a.caption:##Public Domain
+urn:cite2:fufolio:camerarius1668pages.v1:#Pages of the 1668 edition of Camerarius#urn:cite2:fufolio:camerarius1668pages.v1.label:#urn:cite2:fufolio:camerarius1668pages.v1.sequence:#CC-attribution-share-alike
 
 #!citeproperties
 Property#Label#Type#Authority list
 urn:cite2:fufolio:camerarius1668.2020a.urn:#URN#Cite2Urn#
 urn:cite2:fufolio:camerarius1668.2020a.caption:#Caption#String#
 urn:cite2:fufolio:camerarius1668.2020a.rights:#Rights#String#
+
+#!citeproperties
+Property#Label#Type#Authority list
+urn:cite2:fufolio:camerarius1668pages.v1.urn:#URN#Cite2Urn#
+urn:cite2:fufolio:camerarius1668pages.v1.label:#Label#String#
+urn:cite2:fufolio:camerarius1668pages.v1.sequence:#Page sequence#Number#
 
